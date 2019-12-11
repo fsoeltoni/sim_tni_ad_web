@@ -1,26 +1,11 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Admin } from "react-admin";
+import attrs from "./providers/attrs";
+import data from "./providers/data";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const title = attrs.title;
+const dataProvider = data;
+
+const App = () => <Admin title={title} dataProvider={dataProvider} />;
 
 export default App;
